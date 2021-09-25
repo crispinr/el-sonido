@@ -95,3 +95,11 @@ async def resume(ctx):
         await voice_client.resume()
     else:
         await ctx.send("Bot is not playing anything! Use play command...")
+
+@bot.command(name="stop", help="Commands bot to stop playing the song")
+async def stop(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.isplaying():
+        await voice_client.stop()
+    else:
+        await ctx.send("Bot is not playing anything at the moment!")
