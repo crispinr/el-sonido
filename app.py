@@ -78,3 +78,11 @@ async def play(ctx, url):
         await ctx.send("**Now playing: ** {}".format(filename))
     except:
         await ctx.send("Bot connected to voice channel!")
+
+@bot.command(name="pause", help="Commands bot to pause the song")
+async def pause(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_playing():
+        await voice_client.pause()
+    else:
+        await ctx.send("Bot is not playing anything at the moment")
