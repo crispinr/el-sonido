@@ -48,3 +48,21 @@ class YTDLSource(discord.PCMVolumeTransformer):
             data = data["enteries"][0]
         filename = data["title"] if stream else ytdl.prepare_filename(data)
         return filename
+
+@bot.command(name="join", help="Commands the bot to join the voice channel")
+async def join(ctx):
+    if not ctx.message.author.voice:
+        await ctx.send("{} is not connected to a voice channel!".format(ctx.message.author.name))
+        return
+    else:
+        channel = ctx.message.author.voice.channel
+    await channel.connect()
+
+@bot.command(name="leave", help="Commands the bot to leave the voice channel")
+async def leave(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.is_connected():
+        await voice_client.disconnect()
+    else:
+        await ctx.sent("Bot is not connected to a voice channel!")
+
