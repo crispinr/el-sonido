@@ -1,4 +1,5 @@
 import os
+from unicodedata import name
 from async_timeout import asyncio
 import discord
 import youtube_dl
@@ -86,3 +87,11 @@ async def pause(ctx):
         await voice_client.pause()
     else:
         await ctx.send("Bot is not playing anything at the moment")
+
+@bot.command(name="resume", help="Commands bot to resume the song")
+async def resume(ctx):
+    voice_client = ctx.message.guild.voice_client
+    if voice_client.ispaused():
+        await voice_client.resume()
+    else:
+        await ctx.send("Bot is not playing anything! Use play command...")
