@@ -14,13 +14,9 @@ class main_cog(commands.Cog):
 ```
 General commands:
 /help - displays all the available commands
-/clear amount - will delete the past messages with the amount specified
-Image commands:
-/search <keywords> - will change the search to the keyword
-/get - will get the image based on the current search
 Music commands:
 /p <keywords> - finds the song on youtube and plays it in your current channel
-/q - displays the current music queue
+/queue - displays the current music queue
 /skip - skips the current song being played
 ```
 """
