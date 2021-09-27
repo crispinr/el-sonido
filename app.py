@@ -4,6 +4,8 @@ import os
 from dotenv import load_dotenv
 from youtube_dl import YoutubeDL
 
+TOKEN = os.environ["DISCORD_TOKEN"]
+
 bot = commands.Bot(command_prefix='~')
 bot.remove_command('help')
 
@@ -130,4 +132,4 @@ class music_cog(commands.Cog):
             await self.play_music()
 
 bot.add_cog(music_cog(bot))
-bot.run("ODQzODk2MDUzNTg1Njc0MjUx.YKKhcg.bbEzRniN9RN9Ep07p7UGqZIOlXU")
+bot.run(TOKEN)
