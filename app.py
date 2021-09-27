@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import os
+from dotenv import load_dotenv
 from youtube_dl import YoutubeDL
 
 bot = commands.Bot(command_prefix='~')
@@ -151,5 +152,5 @@ class music_cog(commands.Cog):
             await self.play_music()
 
 bot.add_cog(music_cog(bot))
-
-bot.run("ODQzODk2MDUzNTg1Njc0MjUx.YKKhcg.oa7YnA36An0L08ozMZF7VLV9MEk")
+load_dotenv()
+bot.run(os.getenv("discord_token"))
