@@ -132,4 +132,4 @@ class music_cog(commands.Cog):
 
 bot.add_cog(music_cog(bot))
 load_dotenv()
-bot.run(os.getenv("discord_token"))
+bot.run(os.getenv("token"))
