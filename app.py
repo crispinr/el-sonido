@@ -130,4 +130,4 @@ class music_cog(commands.Cog):
             await self.play_music()
 
 bot.add_cog(music_cog(bot))
-bot.run(os.environ.get('DISCORD_TOKEN', None))
+bot.run("ODQzODk2MDUzNTg1Njc0MjUx.YKKhcg.bbEzRniN9RN9Ep07p7UGqZIOlXU")
