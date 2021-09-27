@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import os
-from dotenv import load_dotenv
 from youtube_dl import YoutubeDL
 
 TOKEN = os.environ["DISCORD_TOKEN"]
