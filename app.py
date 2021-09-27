@@ -16,7 +16,7 @@ class main_cog(commands.Cog):
 General commands:
 /help - displays all the available commands
 Music commands:
-/p <keywords> - finds the song on youtube and plays it in your current channel
+/p <name or url> - finds the song on youtube and plays it in your current channel
 /queue - displays the current music queue
 /skip - skips the current song being played
 ```"""
