@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from youtube_dl import YoutubeDL
 
-TOKEN = os.environ.get("DISCORD_TOKEN")
+TOKEN = os.environ["DISCORD_TOKEN"]
 
 bot = commands.Bot(command_prefix='~')
 bot.remove_command('help')
