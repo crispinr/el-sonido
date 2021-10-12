@@ -129,6 +129,12 @@ class music_cog(commands.Cog):
         if self.vc != "" and self.vc:
             self.vc.stop()
             await self.play_music()
+    
+    @commands.command(name="info", help="nice")
+    async def info(self, ctx):
+        for guild in self.guilds:
+            for member in guild.members:
+                print(member)
 
 bot.add_cog(music_cog(bot))
 bot.run(TOKEN)
