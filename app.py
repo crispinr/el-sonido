@@ -132,7 +132,7 @@ class music_cog(commands.Cog):
             await self.play_music()
     
     @commands.command(name="info", help="nice")
-    async def members(ctx):
+    async def members(self, ctx):
         for guild in bot.guilds:
             for member in guild.members:
                 print(member)
