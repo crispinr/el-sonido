@@ -4,8 +4,9 @@ import os
 from youtube_dl import YoutubeDL
 
 TOKEN = os.environ["DISCORD_TOKEN"]
-
-bot = commands.Bot(command_prefix='~')
+intents = discord.Intents.default()
+intents.members = True
+bot = commands.Bot(intents=intents, command_prefix='~')
 bot.remove_command('help')
 
 class main_cog(commands.Cog):
